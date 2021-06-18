@@ -5,38 +5,23 @@ using namespace std;
 
 int main()
 {
+	double num1, num2, sum;
 	char op;
-	double num1,num2;
-
-	cout << "Enter the Operator ( +, -, *, / ) : ";
-	cin >> op;
-
-	cout << "Enter two numbers one by one : ";
-	cin >> num1 >> num2;
-
-	switch (op) {
-
-		case '+':
-			cout << num1 << '+' << num2 << '=' << (num1 + num2);
-			break;
-
-		case '-':
-			cout << num1 << '-' << num2 << '=' << (num1 - num2);
-			break;
-
-		case '*':
-			cout << num1 << '*' << num2 << '=' << (num1 * num2);
-			break;
-
-		case '/':
-			if (num2 != 0.0)
-				cout << num1 << '/' << num2 << '=' << (num1 / num2);
-			else
-				cout << "Divide by zero situation";
-			break;
-
-		default:
-			cout << op << "is an invalid operator";
+	do {
+		cout << "\nEnter first number: ";
+		cin >> num1;
+		cout << "Enter the Operator ( +, -, *, / ) : ";
+		cin >> op;
+		cout << "Enter first number: ";
+		cin >> num2;
+		
+		if (op=='+') sum=num1+num2;
+		if (op=='-') sum=num1-num2;
+		if (op=='*') sum=num1*num2;
+		if (op=='/') sum=num1/num2;
+		
+		cout << sum; 
 }
+	while (op!='e');
 	return 0;
 }
