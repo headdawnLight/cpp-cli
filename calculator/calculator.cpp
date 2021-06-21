@@ -10,9 +10,9 @@ int main()
 	do {
 		cout << "\nEnter first number: ";
 		cin >> num1;
-		cout << "Enter the Operator ( +, -, *, / ) : ";
+		cout << "Enter the operator (+) (-) (*) (/) : ";
 		cin >> op;
-		cout << "Enter first number: ";
+		cout << "Enter second number: ";
 		cin >> num2;
 		
 		if (op=='+') sum=num1+num2;
@@ -20,7 +20,7 @@ int main()
 		if (op=='*') sum=num1*num2;
 		if (op=='/') sum=num1/num2;
 		
-		cout << sum; 
+		cout << "Calculation result: " << sum << endl; 
 }
 	while (op!='e');
 	return 0;
